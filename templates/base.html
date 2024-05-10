@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Планировщик задач</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div id="first" >
+        <h1>Список задач</h1>
+        <form  action="/add" method="post">
+            <div >
+                <label class="thick">Название задачи</label>
+                <input type="text" name="name">
+            <button class="button1" type="submit" >Добавить</button>
+            </div>
+        </form>
+        <br><br>
+     <table>
+         <tbody>
+        {% for todo in todo_list %}
+        <tr>
+            <td class="thick">{{todo.task_id }}</td>
+            <td class="thick">{{ todo.name }}</td>
+            {% if todo.done == False %}
+            <td><label class="label pending">Не выполнено</label></td>
+            {% else %}
+            <td><label class="label done">Выполнено</label></td>
+            {% endif %}
+            <td><a  href="/update/{{ todo.task_id }}" class="button2">Изменить</a></td>
+            <td><a  href="/delete/{{ todo.task_id }}" class="button3">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
