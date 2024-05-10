@@ -13,7 +13,7 @@
 1. Клонируйте репозиторий:
 
 ```
-git clone https://github.com/MaxmiL1ian/Weather_app.git
+https://github.com/MaxmiL1ian/todo_app.git
 ```
 
 2. Установите необходимые пакеты:
