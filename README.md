@@ -1,7 +1,7 @@
 # Планировщик задач на Flask
 Это простое веб-приложение для планировщика задач, созданное с использованием платформы Flask Framework.
 
-![app](https://github.com/MaxmiL1ian/Weather_app/blob/master/app.png)  
+![app](https://github.com/MaxmiL1ian/todo_app/blob/master/ToDo.png)  
 
 ##Особенности
 * Пользователи могут создавать задачи;
